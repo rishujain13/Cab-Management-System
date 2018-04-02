@@ -1,0 +1,187 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title>Company Cab Management</title>
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+   <link rel="stylesheet" type= "text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/datepicker.css">
+ <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+ 
+
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="img/logo.jpg" alt="logo" style="width:40px;">
+  </a>
+  <div class="modify" >
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About Us</a>
+    </li>    <li class="nav-item">
+      <a class="nav-link" href="#">Contact Us</a>
+    </li>
+	
+	
+    <li class="nav-item">
+      <a class="nav-link" href="#"><button  onclick="document.getElementById('id01').style.display='block'" style="width:auto;" type="button" class="btn btn-danger">Login</button></a>
+	  <div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+    </li>
+	 
+  </ul>
+  </div>
+</nav>
+ 
+  <div class="container-fluid">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="img/la.jpg" alt="Los Angeles" style="width:40%;">
+        <div class="carousel-caption">
+          <h3><font color="black">Los Angeles</font></h3>
+          <p><font color="black">LA is always so much fun!</font></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/chicago.jpg" alt="Chicago" style="width:40%;">
+        <div class="carousel-caption">
+          <h3><font color="black">Chicago</font></h3>
+          <p><font color="black">Thank you, Chicago!</font></p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="img/ny.jpg" alt="New York" style="width:40%;">
+        <div class="carousel-caption">
+          <h3><font color="black">New York</font></h3>
+          <p><font color="black">We love the Big Apple!</font></p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+  <!-- book ride div -->
+ 
+
+<div class="bookride">
+<center>Book Ride</center>
+<hr>
+  <form action="/action_page.php">
+    <label for="From">From:</label>
+    <input type="text" id="from" name="from" placeholder="enter source">
+
+    <label for="To">To:</label>
+    <input type="text" id="to" name="to" placeholder="enter destination">
+	
+	 <label for="date">Date:</label>
+    <input type="date" id="date" name="date" ><br>
+    <label for="Time">Time:</label>
+	
+  <select id="time" name="time">
+      <option value="australia">NOW</option>
+      <option value="canada">12MIDNIGHT</option>
+      <option value="canada">1AM</option>
+      <option value="canada">2AM</option>
+      <option value="canada">3AM</option>
+      <option value="usa">4AM</option>
+	  <option value="canada">5AM</option>
+      <option value="canada">6AM</option>
+      <option value="canada">7AM</option>
+      <option value="canada">8AM</option>
+	  <option value="canada">9AM</option>
+      <option value="canada">10AM</option>
+      <option value="canada">11AM</option>
+      <option value="canada">12NOON</option>
+      <option value="canada">1PM</option>
+      <option value="canada">2PM</option>
+      <option value="canada">3PM</option>
+      <option value="canada">4PM</option>
+      <option value="canada">5PM</option>
+      <option value="canada">6PM</option>
+	  <option value="canada">7PM</option>
+	  <option value="canada">8PM</option>
+	  <option value="canada">9PM</option>
+	  <option value="canada">10PM</option>
+	  <option value="canada">11PM</option>
+    </select>
+
+  
+     
+
+  <input type="submit" value="Book">
+  </form>
+</div> 
+</body>
+</html>
